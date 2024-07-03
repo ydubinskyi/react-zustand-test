@@ -1,8 +1,11 @@
 import { useContext } from "react";
-import { LotsDataStore, LotsDataZustandStoreContext } from "./LotDataZustandContext";
+import {
+  LotsDataStore,
+  LotsDataZustandStoreContext,
+} from "./LotDataZustandContext";
 import { useStore } from "zustand";
 
-export const useLotsDataStore = <T>(
+export const useLotsDataZustandStore = <T>(
   selector: (store: LotsDataStore) => T
 ): T => {
   const store = useContext(LotsDataZustandStoreContext);

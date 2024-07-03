@@ -1,7 +1,7 @@
-import { useLotsDataStore } from "../../contexts/zustand/use-lots-data-zustand-store";
+import { useLotsDataZustandStore } from "../../contexts/zustand/use-lots-data-zustand-store";
 
 export function Toolbar() {
-  const updateLot = useLotsDataStore((state) => state.updateLot);
+  const updateLot = useLotsDataZustandStore((state) => state.updateLot);
 
   const modifyOneLot = () => {
     updateLot("1", {

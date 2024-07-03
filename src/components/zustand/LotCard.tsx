@@ -1,7 +1,7 @@
-import { useLotsDataStore } from "../../contexts/zustand/use-lots-data-zustand-store";
+import { useLotsDataZustandStore } from "../../contexts/zustand/use-lots-data-zustand-store";
 
 export function LotCard({ id }: { id: string }) {
-  const lot = useLotsDataStore((state) => state.lots[id]);
+  const lot = useLotsDataZustandStore((state) => state.lots[id]);
 
   if (!lot) {
     return null;
